@@ -19,6 +19,7 @@ syntax enable        " syntax highlighting (formerly syntax on)
 if has("gui_running")
     set lines=58 columns=94
     colorscheme molokai
+    set guioptions-=T  " no toolbar
 endif
 
 filetype plugin on
