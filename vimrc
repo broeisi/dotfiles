@@ -22,3 +22,8 @@ if has("gui_running")
 endif
 
 filetype plugin on
+
+augroup filetype
+au! BufRead,BufNewFile *.acl        set filetype=ciscoacl
+augroup END
+
