@@ -128,14 +128,9 @@ fi
 # Without it text after the prompt doesn wrap to a new line but continues
 # on the beginning of the same line
 
-<<<<<<< HEAD
 #export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \$ \[\e[0m"
 export PATH="$PATH:~/bin"
-=======
 export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$ \[\e[0m"
-
->>>>>>> dotfiles/master
-#export PS1="\e[1;32m\u@\h \e[1;34m\W \$ \e[0m"
 
 colors() {
 	local fgc bgc vals seq0
