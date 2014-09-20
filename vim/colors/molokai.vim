@@ -21,15 +21,17 @@ if version > 580
 endif
 let g:colors_name="molokai"
 
-if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
-else
-    let s:molokai_original = 0
-endif
+"if exists("g:molokai_original")
+"    let s:molokai_original = g:molokai_original
+"else
+"    let s:molokai_original = 0
+"endif
 
-
-hi Boolean         guifg=#AE81FF
-hi Character       guifg=#E6DB74
+hi pythonBuiltin   guifg=#66D9EF
+hi pythonMisc      guifg=#66D9EF            gui=italic
+hi Boolean         guifg=#AE81FF guibg=NONE
+"hi Character       guifg=#E6DB74
+hi Character       guifg=#AE81FF
 hi Number          guifg=#AE81FF
 hi String          guifg=#E6DB74
 hi Conditional     guifg=#F92672               gui=bold
@@ -47,7 +49,7 @@ hi DiffText                      guibg=#4C4745 gui=italic,bold
 hi Directory       guifg=#A6E22E               gui=bold
 hi Error           guifg=#E6DB74 guibg=#1E0010
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
-hi Exception       guifg=#A6E22E               gui=bold
+hi Exception       guifg=#F92672               gui=bold
 hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
@@ -56,12 +58,12 @@ hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
-hi Keyword         guifg=#F92672               gui=bold
+hi Keyword         guifg=#F92672               
 hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
 hi SpecialKey      guifg=#66D9EF               gui=italic
 
-hi Statement       guifg=#66D9EF guibg=NONE    gui=bold
+hi Statement       guifg=#66D9EF
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
@@ -77,7 +79,7 @@ hi PreCondit       guifg=#A6E22E               gui=bold
 "hi PreProc         guifg=#A6E22E
 hi PreProc         guifg=#F92672
 hi Question        guifg=#66D9EF
-hi Repeat          guifg=#F92672               gui=bold
+hi Repeat          guifg=#F92672               
 hi Search          guifg=#FFFFFF guibg=#455354
 " marks
 hi SignColumn      guifg=#A6E22E guibg=#232526
@@ -112,7 +114,7 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
 hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
-if s:molokai_original == 1
+"if s:molokai_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
    hi Comment         guifg=#75715E
    hi CursorLine                    guibg=#3E3D32
@@ -122,7 +124,7 @@ if s:molokai_original == 1
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#75715E
    hi SpecialKey      guifg=#75715E
-else
+"else
    hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
    hi Comment         guifg=#7E8E91
    hi CursorLine                    guibg=#293739
@@ -132,7 +134,7 @@ else
    hi LineNr          guifg=#465457 guibg=#232526
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
-end
+"end
 
 "
 " Support for 256-color terminal
