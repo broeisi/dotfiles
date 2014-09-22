@@ -132,4 +132,4 @@ export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \$ \[\e[0m"
 
 #export PS1="\e[1;32m\u@\h \e[1;34m\W \$ \e[0m"
 
-
+export PATH=$PATH:~/bin

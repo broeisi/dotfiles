@@ -19,7 +19,10 @@ syntax enable        " syntax highlighting (formerly syntax on)
 if has("gui_running")
     set lines=58 columns=94
     colorscheme molokai
+    set guioptions-=m  " no menu bar
     set guioptions-=T  " no toolbar
+    set guioptions-=L  " no left scroll bar
+    set guioptions-=r  " no right scroll bar
 endif
 
 filetype plugin on
