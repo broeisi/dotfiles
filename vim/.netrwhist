@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/usr/local/lib/python3.3/dist-packages/pygame/tests'
+let g:netrw_dirhist_2='/home/broeisi/programa/python'
+let g:netrw_dirhist_3='/home/broeisi/programa'
+let g:netrw_dirhist_4='/home/broeisi/programa/perl'
+let g:netrw_dirhist_5='/home/broeisi/programa'
+let g:netrw_dirhist_6='/home/broeisi/programa/c'
+let g:netrw_dirhist_7='/home/broeisi/programa'
+let g:netrw_dirhist_8='/home/broeisi/programa/html'

@@ -128,8 +128,35 @@ fi
 # Without it text after the prompt doesn wrap to a new line but continues
 # on the beginning of the same line
 
-export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \$ \[\e[0m"
+#export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\W \$ \[\e[0m"
 
-#export PS1="\e[1;32m\u@\h \e[1;34m\W \$ \e[0m"
+export PATH="$PATH:~/bin"
+export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$ \[\e[0m"
 
-export PATH=$PATH:~/bin
+colors() {
+	local fgc bgc vals seq0
+
+	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+
+	# foreground colors
+	for fgc in {30..37}; do
+		# background colors
+		for bgc in {40..47}; do
+			fgc=${fgc#37} # white
+			bgc=${bgc#40} # black
+
+			vals="${fgc:+$fgc;}${bgc}"
+			vals=${vals%%;}
+
+			seq0="${vals:+\e[${vals}m}"
+			printf "  %-9s" "${seq0:-(default)}"
+			printf " ${seq0}TEXT\e[m"
+			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+		done
+		echo; echo
+	done
+}
+

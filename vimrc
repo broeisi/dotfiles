@@ -15,9 +15,8 @@ set incsearch        " But do highlight as you type your search.
 set ignorecase       " Make searches case-insensitive.  
 syntax enable        " syntax highlighting (formerly syntax on)
 
-
 if has("gui_running")
-    set lines=58 columns=94
+    set lines=30 columns=94
     colorscheme molokai
     set guioptions-=m  " no menu bar
     set guioptions-=T  " no toolbar
@@ -31,3 +30,6 @@ augroup filetype
 au! BufRead,BufNewFile *.acl        set filetype=ciscoacl
 augroup END
 
+
+set laststatus=2                " statusline shows as the second last line
+set statusline=%F\ %=\ %Y\ %=   " set nice status line
