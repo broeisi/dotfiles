@@ -15,6 +15,9 @@ set incsearch        " But do highlight as you type your search.
 set ignorecase       " Make searches case-insensitive.  
 syntax enable        " syntax highlighting (formerly syntax on)
 
+set splitbelow
+set splitright 
+
 if has("gui_running")
     set lines=30 columns=94
     colorscheme molokai
