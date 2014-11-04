@@ -132,6 +132,7 @@ fi
 
 export PATH="$PATH:~/bin"
 export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$ \[\e[0m"
+export PAGER="/usr/bin/most -s"
 
 colors() {
 	local fgc bgc vals seq0
