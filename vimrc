@@ -7,7 +7,10 @@ set softtabstop=4    " unify
 set shiftwidth=4     " indent/outdent by 4 columns
 set autoindent       " auto indent
 set shiftround       " always indent to the nearest tabstop
-
+set showmatch
+"set cursorline
+let python_highlight_all = 1
+set showcmd
 
 set number
 set nohlsearch       " Don't continue to highlight searched phrases.
