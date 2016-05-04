@@ -30,7 +30,7 @@ if has("gui_running")
     set guioptions-=r  " no right scroll bar
 endif
 
-filetype plugin on
+filetype plugin indent on
 
 augroup filetype
 au! BufRead,BufNewFile *.acl        set filetype=ciscoacl
@@ -38,4 +38,7 @@ augroup END
 
 
 set laststatus=2                " statusline shows as the second last line
-set statusline=%F\ %=\ %Y\ %=   " set nice status line
+set statusline=%F\ %=\ col:\ %c\ %Y\ %=   " set nice status line
+
+"command to easily install plugins... just put them in .vim/bundle directory
+execute pathogen#infect()
