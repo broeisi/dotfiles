@@ -133,7 +133,8 @@ fi
 export PATH="$PATH:~/bin"
 export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$(__git_ps1)$ \[\e[0m"
 #export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]" 
-export PAGER="/usr/bin/most -s"
+export MANPAGER="/usr/bin/most -s"
+export PAGER="/usr/bin/less -X"
 
 colors() {
 	local fgc bgc vals seq0
