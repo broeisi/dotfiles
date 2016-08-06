@@ -133,7 +133,13 @@ fi
 export PATH="$PATH:~/bin"
 export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$(__git_ps1)$ \[\e[0m"
 #export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]" 
-export MANPAGER="/usr/bin/most -s"
+
+if [ -f "/usr/bin/most" ];then
+    export MANPAGER="/usr/bin/most -s"
+else
+    export MANPAGER="/usr/bin/pager"
+fi
+
 export PAGER="/usr/bin/less -X"
 
 colors() {
