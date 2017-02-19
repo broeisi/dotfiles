@@ -1,3 +1,4 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -133,6 +134,7 @@ fi
 export PATH="$PATH:~/bin"
 export PS1="\[\e[1;32m\]\u@\h \[\e[38;5;45m\]\W \$(__git_ps1)$ \[\e[0m"
 #export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]" 
+export CDPATH=".:$HOME"
 
 if [ -f "/usr/bin/most" ];then
     export MANPAGER="/usr/bin/most -s"
@@ -168,3 +170,5 @@ colors() {
 		echo; echo
 	done
 }
+
+umask 0022
