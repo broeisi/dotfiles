@@ -21,11 +21,11 @@ if version > 580
 endif
 let g:colors_name="molokai"
 
-"if exists("g:molokai_original")
-"    let s:molokai_original = g:molokai_original
-"else
-"    let s:molokai_original = 0
-"endif
+if exists("g:molokai_original")
+    let s:molokai_original = g:molokai_original
+else
+    let s:molokai_original = 0
+endif
 
 hi pythonBuiltin   guifg=#66D9EF
 hi pythonMisc      guifg=#66D9EF            gui=italic
