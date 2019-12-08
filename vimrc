@@ -1,25 +1,43 @@
-set nocompatible     " disable VI compatible mode
+set nocompatible             " disable VI compatible mode
+syntax enable                " syntax highlighting (formerly syntax on)
+set encoding=utf-8           " set the encoding to utf-8
+set showcmd                  " display incomplete commands
+filetype plugin indent on    " load file type plugins + indentation
 
 
-set expandtab        " use spaces instead of tabs
-set tabstop=4        " tab spacing
-set softtabstop=4    " unify
-set shiftwidth=4     " indent/outdent by 4 columns
-set autoindent       " auto indent
-set shiftround       " always indent to the nearest tabstop
-set showmatch
-"set cursorline
-let python_highlight_all = 1
-set showcmd
+"" Whitespace
+set nowrap                        " don't wrap lines
+set expandtab                     " use spaces instead of tabs
+set tabstop=4                     " tab spacing
+set softtabstop=4                 " unify
+set shiftwidth=4                  " indent/outdent by 4 columns
+set autoindent                    " auto indent
+set shiftround                    " always indent to the nearest tabstop
+set backspace=indent,eol,start    " backspace through everything in insert mode
 
-set number
+
+"" Searching
 set nohlsearch       " Don't continue to highlight searched phrases.
 set incsearch        " But do highlight as you type your search.
 set ignorecase       " Make searches case-insensitive.  
-syntax enable        " syntax highlighting (formerly syntax on)
+set smartcase        " ... unless they contain at least one capital letter
 
+
+"" Python specific
+let python_highlight_all = 1
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+
+"" Misc
+set showmatch
+"set cursorline
+set showcmd
+set number
 set splitbelow
 set splitright 
+
+
 
 if has("gui_running")
     set lines=30 columns=94
