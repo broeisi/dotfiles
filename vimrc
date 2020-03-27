@@ -12,6 +12,7 @@ set tabstop=4                     " tab spacing
 set softtabstop=4                 " unify
 set shiftwidth=4                  " indent/outdent by 4 columns
 set autoindent                    " auto indent
+set smartindent                   " smart indent
 set shiftround                    " always indent to the nearest tabstop
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
